@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSM.AppUI", "TSM.AppUI\TSM.AppUI.csproj", "{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSM.Infra.Data", "TSM.Infra.Data\TSM.Infra.Data.csproj", "{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06C8CEBD-E11A-4950-93A2-C24394D9BC6B}
+	EndGlobalSection
+EndGlobal

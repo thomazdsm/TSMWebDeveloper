@@ -11,10 +11,10 @@ namespace TSMWebDeveloper
             showLoginForm();
         }
 
-        private void showLoginForm()
+        public void showLoginForm()
         {
             Panel painel = leftPanel;
-            var login = new LoginForm();
+            var login = new LoginForm(this);
             login.TopLevel = false;
             login.Parent = painel;
             login.Dock = DockStyle.Fill;
@@ -23,10 +23,10 @@ namespace TSMWebDeveloper
             login.Visible = true;
         }
 
-        private void showRegisterForm()
+        public void showRegisterForm()
         {
             Panel painel = leftPanel;
-            var login = new RegisterForm();
+            var login = new RegisterForm(this);
             login.TopLevel = false;
             login.Parent = painel;
             login.Dock = DockStyle.Fill;
@@ -35,14 +35,14 @@ namespace TSMWebDeveloper
             login.Visible = true;
         }
 
-        private void materialButton1_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
-            showLoginForm();
+            Close();
         }
 
-        private void materialButton2_Click(object sender, EventArgs e)
+        private void minimizeButton_Click(object sender, EventArgs e)
         {
-            showRegisterForm();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

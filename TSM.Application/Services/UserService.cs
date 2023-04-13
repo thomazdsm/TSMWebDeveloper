@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TSM.Application.Interfaces;
 using TSM.Application.ViewModels;
+using TSM.Domain.Entities;
 using TSM.Domain.Interfaces;
 
 namespace TSM.Application.Services
@@ -15,10 +16,15 @@ namespace TSM.Application.Services
         private IUserRepository _repository;
         private readonly IMapper _mapper;
 
-        public UserService(IUserRepository repository, IMapper mapper)
+        public UserService(IUserRepository repository)
         {
             _repository = repository;
-            _mapper = mapper;
+
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<UserViewModel, User>();
+            });
+            _mapper = mapperConfig.CreateMapper();
         }
 
         public Task<IEnumerable<UserViewModel>> GetUsers()
@@ -33,7 +39,7 @@ namespace TSM.Application.Services
 
         public void AddUser(UserViewModel user)
         {
-            throw new NotImplementedException();
+            _repository.AddUser(_mapper.Map<User>(user));
         }
 
         public void UpdateUser(UserViewModel user)

@@ -20,7 +20,8 @@ namespace TSM.Infra.Data.Repositories
 
         public void AddUser(User user)
         {
-            throw new NotImplementedException();
+            _context.Users.Add(user);
+            _context.SaveChanges();
         }
 
         public void DeleteUser(int id)

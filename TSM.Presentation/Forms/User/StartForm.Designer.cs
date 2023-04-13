@@ -55,6 +55,7 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(460, 460);
             this.rightPanel.TabIndex = 2;
+            this.rightPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.rightPanel_Paint);
             // 
             // minimizeButton
             // 

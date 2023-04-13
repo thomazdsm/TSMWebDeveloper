@@ -1,12 +1,19 @@
-using TSM.Infra.Data.Context;
+using Microsoft.Extensions.DependencyInjection;
+using TSM.Application.Interfaces;
+using TSM.Application.Services;
 using TSM.Presentation.Forms.User;
 
 namespace TSMWebDeveloper
 {
     public partial class StartForm : Form
     {
-        public StartForm()
+
+        private readonly IUserService _userService;
+
+        public StartForm(IServiceProvider serviceProvider)
         {
+            _userService = serviceProvider.GetRequiredService<IUserService>();
+
             InitializeComponent();
             showLoginForm();
         }
@@ -14,25 +21,25 @@ namespace TSMWebDeveloper
         public void showLoginForm()
         {
             Panel painel = leftPanel;
-            var login = new LoginForm(this);
-            login.TopLevel = false;
-            login.Parent = painel;
-            login.Dock = DockStyle.Fill;
+            var loginForm = new LoginForm(this);
+            loginForm.TopLevel = false;
+            loginForm.Parent = painel;
+            loginForm.Dock = DockStyle.Fill;
             painel.Controls.Clear();
-            painel.Controls.Add(login);
-            login.Visible = true;
+            painel.Controls.Add(loginForm);
+            loginForm.Visible = true;
         }
 
         public void showRegisterForm()
         {
             Panel painel = leftPanel;
-            var login = new RegisterForm(this);
-            login.TopLevel = false;
-            login.Parent = painel;
-            login.Dock = DockStyle.Fill;
+            var registerForm = new RegisterForm(this, _userService);
+            registerForm.TopLevel = false;
+            registerForm.Parent = painel;
+            registerForm.Dock = DockStyle.Fill;
             painel.Controls.Clear();
-            painel.Controls.Add(login);
-            login.Visible = true;
+            painel.Controls.Add(registerForm);
+            registerForm.Visible = true;
         }
 
         private void closeButton_Click(object sender, EventArgs e)
@@ -43,6 +50,11 @@ namespace TSMWebDeveloper
         private void minimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void rightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

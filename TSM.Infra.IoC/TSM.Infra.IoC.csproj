@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TSM.Application\TSM.Application.csproj" />
     <ProjectReference Include="..\TSM.Domain\TSM.Domain.csproj" />
+    <ProjectReference Include="..\TSM.Infra.Data\TSM.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

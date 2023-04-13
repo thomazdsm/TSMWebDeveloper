@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TSM.Infra.Data\TSM.Infra.Data.csproj" />
+    <ProjectReference Include="..\TSM.Application\TSM.Application.csproj" />
+    <ProjectReference Include="..\TSM.Infra.IoC\TSM.Infra.IoC.csproj" />
   </ItemGroup>
 
   <ItemGroup>

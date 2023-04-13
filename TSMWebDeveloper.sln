@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSM.AppUI", "TSM.AppUI\TSM.AppUI.csproj", "{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSM.Presentation", "TSM.Presentation\TSM.Presentation.csproj", "{C1F7929F-2F72-44B2-A2EF-66EA9F2DD955}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSM.Infra.Data", "TSM.Infra.Data\TSM.Infra.Data.csproj", "{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSM.Infra.Data", "TSM.Infra.Data\TSM.Infra.Data.csproj", "{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSM.Application", "TSM.Application\TSM.Application.csproj", "{93DDC79D-EDA9-45E2-BBC4-128C2E55B27F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSM.Infra.IoC", "TSM.Infra.IoC\TSM.Infra.IoC.csproj", "{4294A36D-37CF-464E-8935-C5B595D3A52F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSM.Domain", "TSM.Domain\TSM.Domain.csproj", "{8A88DC67-65A8-4541-80AD-035753C7DD49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79F2F922-CC26-44BC-B2D6-9C26FB218ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DDC79D-EDA9-45E2-BBC4-128C2E55B27F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DDC79D-EDA9-45E2-BBC4-128C2E55B27F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DDC79D-EDA9-45E2-BBC4-128C2E55B27F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DDC79D-EDA9-45E2-BBC4-128C2E55B27F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4294A36D-37CF-464E-8935-C5B595D3A52F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4294A36D-37CF-464E-8935-C5B595D3A52F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4294A36D-37CF-464E-8935-C5B595D3A52F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4294A36D-37CF-464E-8935-C5B595D3A52F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A88DC67-65A8-4541-80AD-035753C7DD49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A88DC67-65A8-4541-80AD-035753C7DD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A88DC67-65A8-4541-80AD-035753C7DD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A88DC67-65A8-4541-80AD-035753C7DD49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿namespace TSM.AppUI.Forms.User
+﻿namespace TSM.Presentation.Forms.User
 {
     partial class LoginForm
     {

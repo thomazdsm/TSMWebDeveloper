@@ -9,22 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TSMWebDeveloper;
 
-namespace TSM.AppUI.Forms.User
+namespace TSM.Presentation.Forms.User
 {
-    public partial class RegisterForm : Form
+    public partial class LoginForm : Form
     {
         private readonly StartForm startForm;
 
-        public RegisterForm(StartForm startForm)
+        public LoginForm(StartForm startForm)
         {
             InitializeComponent();
-            nameTextBox.Focus();
+            mailTextBox.Focus();
             this.startForm = startForm;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            startForm.showLoginForm();
+            startForm.showRegisterForm();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
